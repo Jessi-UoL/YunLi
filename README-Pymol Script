@@ -25,4 +25,7 @@ load WTwnt7a-8TZP-human.pdb
 remove not chain A
 save WTwnt7a.pdb
 
-save aswnt1.pdb aswnt2.pdb aswnt3.pdb aswnt4.pdb aswnt5.pdb aswnt6.pdb aswnt7.pdb WTwnt3.pdb WTwnt3a.pdb WTwnt7a.pdb WTwnt7b-human.pdb in File 需要对比PDB。file
+save aswnt1.pdb aswnt2.pdb aswnt3.pdb aswnt4.pdb aswnt5.pdb aswnt6.pdb aswnt7.pdb WTwnt3.pdb WTwnt3a.pdb WTwnt7a.pdb WTwnt7b-human.pdb in File 需要对比PDB.file
+
+### Output
+Processed PDB files containing only the WNT Chain A structure.
