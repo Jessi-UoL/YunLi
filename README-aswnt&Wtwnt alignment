@@ -1,1 +1,34 @@
+## asWnt and WTwnt structure alignment
 
+### Purpose
+To compare the three-dimensional structures of AI-generated asWnt proteins with wild-type Wnt (WTwnt) reference structures.
+
+### Input
+PDB structure files of asWnt1–asWnt7 and WTwnt3, WTwnt3a and WTwnt7b_human.
+
+### Processing
+The structures were aligned in PyMOL using `align aswnt, WTwnt`, with asWnt as the mobile structure and WTwnt as the reference structure.
+Default alignment parameters were used.
+The aligned structures were exported together as a PDB file.
+
+Example PyMOL workflow:
+
+```pymol
+load aswnt1.pdb, aswnt
+load WTwnt3a.pdb, WTwnt
+align aswnt, WTwnt
+save aswnt1-WTwnt3a.pdb, aswnt or WTwnt
+```
+
+The workflow was repeated for each structure pair using the corresponding input filenames.
+
+### Output
+15 PDB files containing aligned asWnt and WTwnt structure pairs:
+
+- asWnt1–asWnt7 aligned with WTwnt3a: 7 files.
+- asWnt1–asWnt7 aligned with WTwnt7b_human: 7 files.
+
+Output files were named according to the compared structures, for example:
+`aswnt1-WTwnt3a.pdb` and `aswnt1-WTwnt7b_human.pdb`.
+
+###Output: the file named `aswnt,WTwnt对比`
