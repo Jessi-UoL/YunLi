@@ -1,0 +1,31 @@
+## WNT structure extraction
+
+### Purpose
+To obtain the isolated WNT protein structure for subsequent three-dimensional structural comparison.
+
+### Input
+Original PDB structure files containing WNT and other structural components.
+
+### Processing
+The structures were processed in PyMOL. Chain A was identified as the WNT protein chain. 
+All structural components other than Chain A were removed, and the remaining Chain A structure was exported as an independent PDB file.
+
+Example PyMOL workflow:
+
+```pymol
+load WTwnt3-6AHY-human.pdb
+remove not chain A
+save WTwnt3.pdb
+
+load WTwnt3a-7DRT-human.pdb
+remove not chain A
+save WTwnt3a.pdb
+
+load WTwnt7a-8TZP-human.pdb
+remove not chain A
+save WTwnt7a.pdb
+
+save aswnt1.pdb aswnt2.pdb aswnt3.pdb aswnt4.pdb aswnt5.pdb aswnt6.pdb aswnt7.pdb WTwnt3.pdb WTwnt3a.pdb WTwnt7a.pdb WTwnt7b-human.pdb in File 需要对比PDB.file
+
+### Output
+Processed PDB files containing only the WNT Chain A structure.
